@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/decodificar.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <title>Decodificador de Texto</title>
+</head>
+<body>
+    <header>
+        <img src="./img/icone_alura.png" alt="Logo da Alura" class="alura-logo">
+    </header>
+    <main>
+        <article class="main">
+            <section class="first-section">
+                <textarea class="textarea-main" placeholder="Digite seu texto"></textarea>
+                <div class="content-button">
+                    <span class="alert">
+                        <img src="./img/alerta.png" alt="Icone de alerta" />
+                        Apenas letras minúsculas e sem acento.
+                    </span>
+                    <div class="button">
+                        <button class="encryption-button" onclick="encryptionbutton()">Criptografar</button>
+                        <button class="decrypt-button" onclick="decryptbutton()">Descriptografar</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="second-section">
+                <img class="awaiting-input" src="./img/esperando_entrada.png" alt="Pessoa observando e esperando entrada">
+                <textarea  class="textarea-auxiliary" placeholder="Nenhuma mensagem encontrada" readonly></textarea>
+                <p class="textarea-additional">Digite um texto que você deseja criptografar ou descriptografar.</p>
+                <button class="copy-button" onclick="copybutton()">Copiar</button>
+            </section>
+        </article>
+    </main>
+    <footer class="footer">Desenvolvido por Felipe Bertulino, com base no aprendizado adquirido nas aulas da Alura.</footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+</body>
+</html>

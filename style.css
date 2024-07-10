@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --font-family-main: 'Inter', sans-serif;
+    --font-family-secondary: 'Space Mono', monospace;
+    --font-weight: 400;
+    --letter-spacing: 1px;
+    
+    --color-background: #ffffff;
+    --color-text-main: #1c1c1c;
+    --color-text-secondary: #4d4d4d;
+    --color-button-bg: #006bb3;
+    --color-button-border: #006bb3;
+    --color-button-bg-primary: #ff9900;
+    --color-footer-bg: #e6e6e6;
+    --color-footer-text: #1c1c1c;
+
+    
+    --spacing-small: 10px;
+    --spacing-medium: 20px;
+    --spacing-large: 25px;
+    --spacing-xlarge: 1rem;
+    
+    --border-radius: 20px;
+    --border-radius-large: 32px;
+    
+    --font-size-main: 1rem;
+    --font-size-large: 32px;
+    --font-size-medium: 20px;
+    --font-size-small: 14px;
+    
+    --button-width: 45%;
+    --button-max-width: 2000px;
+    --button-min-width: 120px;
+    --button-height: 50px;
+    
+    --textarea-width: 90%;
+    --textarea-height: 60%;
+    --textarea-height-small: 20vh;
+    
+    --box-shadow: 0px 3vw 4vw -1vw rgba(0, 0, 0, 0.08);
+    
+    --footer-height: 5vh;
+    
+    --max-width: 1200px;
+    --main-padding: 1rem;
+    --container-margin: auto;
+}
+
+* {
+    font-family: var(--font-family-main);
+    font-weight: var(--font-weight);
+    box-sizing: border-box;
+    letter-spacing: var(--letter-spacing);
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--color-background);
+}
+
+.alura-logo {
+    max-width: 100%;
+    position: relative;
+    margin-top: var(--spacing-large);
+    margin-left: 70px;
+    object-fit: none;
+}
+
+.main {
+    margin: var(--container-margin);
+    width: var(--textarea-width);
+    max-width: var(--max-width);
+    min-height: calc(100vh - 80px - 56px);
+    align-items: end;
+    display: grid;
+    padding: var(--main-padding);
+    grid-template-columns: 2.5fr 1fr;
+    gap: var(--main-padding);
+    grid-auto-flow: dense;
+}
+
+textarea, button, .indications {
+    font-size: var(--font-size-main);
+}
+
+.alert {
+    color: var(--color-text-secondary);
+}
+
+.button {
+    display: flex;
+    gap: var(--spacing-medium);
+    padding: 0.8rem;
+}
+
+.encryption-button, .decrypt-button, .copy-button {
+    width: var(--button-width);
+    max-width: var(--button-max-width);
+    min-width: var(--button-min-width);
+    height: var(--button-height);
+    font-weight: bold;
+    border-radius: var(--border-radius);
+    border: none;
+    border: 1px solid var(--color-button-border);
+}
+
+.encryption-button {
+    color: white;
+    background: var(--color-button-bg-primary);
+}
+
+.decrypt-button, .copy-button {
+    color: var(--color-text-main);
+    background: var(--color-button-bg);
+}
+
+.copy-button {
+    display: none;
+}
+
+.first-section {
+    width: 100%;
+    height: 92%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.second-section {
+    align-items: center;
+    background: white;
+    border-radius: var(--border-radius-large);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2vw;
+    gap: 2vw;
+    box-shadow: var(--box-shadow);
+    width: 90%;
+    max-width: 500px;
+    margin: var(--container-margin);
+    height: 550px;
+    margin-top: -60px;
+}
+
+.textarea-main {
+    width: var(--textarea-width);
+    height: var(--textarea-height);
+    min-height: var(--textarea-height);
+    background: transparent;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: var(--font-size-large);
+    color: var(--color-text-main);
+}
+
+.textarea-main::placeholder {
+    color: var(--color-text-main);
+}
+
+.textarea-auxiliary {
+    width: 100%;
+    font-size: var(--font-size-medium);
+    color: var(--color-text-secondary);
+    border: none;
+    outline: none;
+    text-align: center;
+    overflow-y: hidden;
+    resize: none;
+    font-family: var(--font-family-secondary);
+    background: white;
+}
+
+.textarea-auxiliary:not(:placeholder-shown),
+.textarea-auxiliary:not([readonly]) {
+    overflow-y: auto;
+}
+
+.textarea-additional {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-small);
+    text-align: center;
+    background: white;
+    font-size: 10px;
+    margin-top: -20px;
+}
+
+.awaiting-input {
+    min-width: 230px;
+    width: 50%;
+    background: white;
+}
+
+.footer {
+    color: var(--color-footer-text);
+    background: var(--color-footer-bg);
+    text-align: center;
+    padding: 9px;
+    margin-top: auto;
+    margin-bottom: 0;
+}
